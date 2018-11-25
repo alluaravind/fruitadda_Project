@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+</head>
+<body>
+  <p id="a"> </p>
+  <script>
+    quantityarray = [];
+    pricearray = [];
+    var arr = [[]];
+    var arr1 = [];
+    var price = [];
+    var quantity = [];
+    var final=[];
+    var p =0;
+var fruits=[{"fname":"orange","quantity":"130","price":"20"},{"fname":"pappaya","quantity":"123","price":"14"},{"fname":"fruit31","quantity":"12","price":"2"},{"fname":"banana","quantity":"2","price":"10"},{"fname":"sapota","quantity":"12","price":"5"}];
+    
+for(var i=0;i<fruits.length;i++){
+  price[i] = parseInt(fruits[i].price);
+}
+for(var i=0;i<fruits.length;i++){
+  quantity[i] = parseInt(fruits[i].quantity);
+}
+document.write(price);
+document.write("<br>");
+document.write(quantity);
+
+for(var i=0;i<price.length;i++){
+  for(var j=0;j<price.length;j++){
+      for(var k=0;k<price.length;k++){
+          if(price[i] < 100 && price[j] < 100 && price[k] < 100 && i!=j && j!=k && k!=i ){
+            arr1[p] = [[quantity[i],price[i]],
+                   [quantity[j],price[j]],
+                         [quantity[k],price[k]]];
+            //document.writeln(arr1[p]);
+            p++;
+            }
+        }
+    }
+}
+
+//document.write(arr1[0][0][0]);
+for(var i=0;i<arr1.length;i++){
+  for(var j=0;j<3;j++){
+        quantityarray[j]=[arr1[i][j][0]];
+        pricearray[j]=[arr1[i][j][1]];  
+    }
+    //document.write(quantityarray);
+    combination(quantityarray,pricearray);
+   // document.write("<br>");
+    
+}
+function combination(forarray,forbody){
+  for(var i=0;i<forarray[0];i++){
+      for(var j=0;j<forarray[1];j++){
+          for(var k=0;k<forarray[2];k++){
+                if( ((i*forbody[0]) + (j*forbody[1]) + (k*forbody[2])) == 100 ){
+                  document.writeln(i); document.write("  ");
+                  document.write(forbody[0]);
+                  document.write("<br>");
+                  document.writeln(j); document.write("  ");
+                  document.write(forbody[1]);
+                  document.write("<br>");
+                  document.writeln(k); document.write("  ");
+                  document.write(forbody[2]);
+                  document.write("<br>");
+                  //document.writeln(j,forbody[1]); document.write("<br>");
+                  //document.writeln(k,forbody[2]); document.write("<br>");
+
+                }
+          }   
+            document.write("<br>");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+
+}
+
+
+</script>    
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+    #bt1{
+
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+    }
+    #bt11{
+
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+    }
+    #bt2{
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 10px;
+      border: none;
+      cursor: pointer;
+    }
+    #loginbt1{
+      background-color: #4CAF50;
+      color: white;
+      font-size: 14px;
+      padding: 10px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    label{
+      color: #006E6D;
+    }
+
+    .container
+    {
+      margin-top: 10%;
+    }
+    .container>.row>div:nth-child(2)    
+    {
+      border: 3px solid #e9e9e9;
+      border-radius: 10px;
+      padding:4%;
+    }
+    .container>.row>div:nth-child(2)>form>button
+    {
+      display: block;
+      margin:0px auto;
+      background-color: #84e184;
+    }
+    form p
+    {
+      display:none;
+    }   
+    select:focus{
+      min-width: 200px;
+      width: auto;
+    }
